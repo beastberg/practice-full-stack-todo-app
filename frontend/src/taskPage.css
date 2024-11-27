@@ -1,0 +1,157 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Main container */
+  .main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Heading */
+  .main h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #444;
+  }
+  
+  /* Form Styling */
+  form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    border-color: #007bff;
+  }
+  
+  form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Task Styling */
+  .task {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #222;
+  }
+  
+  .task p {
+    margin: 10px 0 15px;
+    color: #555;
+  }
+  
+  .task button {
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: #fff;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .task button:hover {
+    background-color: #a71d2a;
+  }
+  
+  /* Error Message */
+  p[style="color: red"] {
+    color: red;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  /* Logout Button */
+  button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  /* Loading and No Task Text */
+  p {
+    text-align: center;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .main {
+      padding: 15px;
+    }
+  
+    .task h2 {
+      font-size: 1.2rem;
+    }
+  
+    .task p {
+      font-size: 0.9rem;
+    }
+  
+    form input,
+    form textarea {
+      font-size: 0.9rem;
+    }
+  
+    form button,
+    .task button,
+    button {
+      font-size: 0.8rem;
+    }
+  }
+  

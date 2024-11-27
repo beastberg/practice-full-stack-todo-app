@@ -21,7 +21,7 @@ export const getTask = async (req, res) => {
     try {
       //console.log("User ID from req.user:", req.user.id); // Debug
       const task = await Task.find({userId: req.user.id });
-      res.json({task});
+      res.send({task});
     } catch (error) {
       //console.error("Error fetching tasks:", error.message);
       res.status(500).json({ message: "Server error", error: error.message });
@@ -41,4 +41,17 @@ export const protect = (req,res,next)=>{
         res.status(401).json({message:"invalid token",error:error.message})
     }
 
+}
+
+export const deleteTask = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const delTask = await Task.findByIdAndDelete(id);
+        if (!delTask) {
+            return res.status(404).json({ message: "Task not found" })
+        }
+        res.status(200).json({ message: "TASK DELETED SUCCESSFULLY", id })
+    } catch (error) {
+        res.status(500).json({ message: "Error deleting task", error: error.message });
+    }
 }
